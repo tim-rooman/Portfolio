@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Personal portfolio</title>
+</head>
+
+<body>
+
+    <header>
+        <a href="#" class="logo">Portfolio</a>
+        <div class="toggle" onclick="toggleMenu();"></div>
+        <ul class="menu">
+            <li>
+                <a href="#home" onclick="toggleMenu();">Home</a>
+            </li>
+            <li>
+                <a href="#about" onclick="toggleMenu();">About</a>
+            </li>
+            <li>
+                <a href="#skills" onclick="toggleMenu();">Skills</a>
+            </li>
+            <li>
+                <a href="#work" onclick="toggleMenu();">Work</a>
+            </li>
+        </ul>
+    </header>
+
+    <section class="banner" id="home">
+        <div class="textBox">
+            <h2>Hello, I'm <br><span> Tim Rooman. </span></h2>
+            <h3>I'm a Front end web developer.</h3>
+            <a href="#about" class="button">About me</a>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="heading">
+            <h2>About me</h2>
+        </div>
+        <div class="content">
+            <div class="contentBox w50">
+                <h3>I'm a Front end web developer.</h3>
+                <p>
+                    Ever since a friend kept on showing me the websites and apps he made for school I've
+                    been hooked on
+                    development myself.</p>
+                <p>
+                    When I browse the web I often find myself thinking 'How does this work?'' Or
+                    'Wow this is cool, I want to make this too!' and then I start looking into it and
+                    trying things out
+                    to find out myself how things work.
+                </p>
+                <p>
+                    In my free time I like to work on my own projects, watch series, walk, chat with friends,
+                    try out new frontend frameworks, help people out with IT problems and edit videos.
+                </p>
+            </div>
+            <div class="w50">
+                <img src="images/me.jpg">
+            </div>
+        </div>
+    </section>
+
+    <section class="skills" id="skills">
+        <div class="heading white">
+            <h2>Skills</h2>
+            <p>These are the technologies I have experience with</p>
+        </div>
+        <div class="content">
+            <div class="skillsBox">
+                <img src="images/icon1.png">
+                <h2>Web design</h2>
+                <p>Figma</p>
+            </div>
+            <div class="skillsBox">
+                <img src="images/icon2.png">
+                <h2>Web development</h2>
+                <p>Html/CSS/React/Svelte/Vue</p>
+            </div>
+            <div class="skillsBox">
+                <img src="images/icon3.png">
+                <h2>Application development</h2>
+                <p>React Native/Angular</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="work" id="work">
+        <div class="heading white">
+            <h2>My work</h2>
+            <p>Below here is some of the work I've done.</p>
+        </div>
+        <div class="content">
+            <a href="https://play.google.com/store/apps/details?id=timrooman.reventory&gl=BE"
+            target="_blank"
+            class="workBox">
+                <img src="images/ReventoryProject.png">
+            </a>
+            <a href="https://github.com/tim-rooman/2021projbuyandcollect"
+            target="_blank"
+            class="workBox">
+                <img src="images/BuyAndCollectProject.png">
+            </a>
+            <a href="https://github.com/tim-rooman/2122-datasecurityopenauthentication"
+            target="_blank" 
+            class="workBox">
+                <img src="images/OpenAuthProject.png">
+            </a>
+            <!--<div class="workBox">
+                <img src="images/product4.jpg">
+            </div> -->
+            <!-- <div class="heading">
+                <a href="#" class="button">View more</a>
+            </div> -->
+        </div>
+    </section>
+
+    <script type="text/javascript">
+        window.addEventListener('scroll', function () {
+            var header = document.querySelector('header');
+            header.classList.toggle('sticky', window.scrollY > 0)
+        })
+
+        function toggleMenu() {
+            var menuToggle = document.querySelector('.toggle');
+            var menu = document.querySelector('.menu');
+            menuToggle.classList.toggle('active');
+            menu.classList.toggle('active');
+        }
+    </script>
+
+</body>
+
+</html>
